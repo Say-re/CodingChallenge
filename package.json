@@ -3,10 +3,34 @@
   "version": "1.0.0",
   "description": "Coding challenge for Intelage ",
   "main": "index.js",
+  "jest": {
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "src/components/**/*",
+      "src/containers/**/*",
+      "src/helpers/**/*",
+      "src/reducers/**/*"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 0,
+        "branches": 0,
+        "functions": 0,
+        "lines": 0
+      }
+    },
+    "setupFiles": [
+      "<rootDir>/test/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "testURL": "http://localhost:9090"
+  },
   "scripts": {
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "test-suite": "jest"
+    "test-suite": "jest test/*/unit test/*/integration --coverage"
   },
   "keywords": [
     "React",
@@ -16,19 +40,25 @@
   "author": "Sayre",
   "license": "ISC",
   "dependencies": {
+    "css-loader": "^6.5.1",
     "isomorphic-fetch": "^3.0.0",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.1.0",
-    "react-router-dom": "^5.3.0",
+    "react-router-dom": "^6.0.2",
     "redux": "^4.1.1",
-    "style-loader": "^3.2.1",
+    "redux-thunk": "^2.4.1",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "styled-components": "^5.3.3",
     "webpack": "^5.53.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
+    "@babel/polyfill": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-flow": "^7.10.4",
     "@babel/preset-react": "^7.10.4",

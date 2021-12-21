@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Multiselect Component Tests MultiSelectComponent Snapshot Test 1`] = `
+<div
+  id="multiselectWrapper"
+>
+  <label
+    for="codingExperience"
+  >
+    Please Select Coding Experience - select all that apply
+  </label>
+  <select
+    id="codingExperience"
+    multiple={true}
+    onChange={[Function]}
+    size={10}
+  >
+    <option
+      value="Javascript"
+    >
+      Javascript
+    </option>
+    <option
+      value="HTML"
+    >
+      HTML
+    </option>
+    <option
+      value="CSS"
+    >
+      CSS
+    </option>
+    <option
+      value="SASS"
+    >
+      SASS
+    </option>
+    <option
+      value="NodeJS"
+    >
+      NodeJS
+    </option>
+    <option
+      value="Java"
+    >
+      Java
+    </option>
+    <option
+      value="AWS - Lambda"
+    >
+      AWS - Lambda
+    </option>
+    <option
+      value="AWS - IAM"
+    >
+      AWS - IAM
+    </option>
+    <option
+      value="AWS - DynamoDB"
+    >
+      AWS - DynamoDB
+    </option>
+    <option
+      value="S3"
+    >
+      S3
+    </option>
+  </select>
+</div>
+`;

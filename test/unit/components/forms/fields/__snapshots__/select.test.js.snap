@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Option Component Tests SelectOptionComponent Snapshot 1`] = `
+<div
+  id="selectOptions"
+>
+  <label
+    for="job-select"
+  >
+    Select Job Title
+  </label>
+  <select
+    id="job-select"
+    name="jobs"
+    onChange={[Function]}
+  >
+    <option
+      key="0"
+      value="Manager"
+    >
+      Manager
+    </option>
+    <option
+      key="1"
+      value="Engineer - Lead"
+    >
+      Engineer - Lead
+    </option>
+    <option
+      key="2"
+      value="Engineer - Mid-level"
+    >
+      Engineer - Mid-level
+    </option>
+    <option
+      key="3"
+      value="Engineer - Junior"
+    >
+      Engineer - Junior
+    </option>
+    <option
+      key="4"
+      value="Engineer - Front-end Focused"
+    >
+      Engineer - Front-end Focused
+    </option>
+    <option
+      key="5"
+      value="Engineer - Backend Focused"
+    >
+      Engineer - Backend Focused
+    </option>
+    <option
+      key="6"
+      value="Engineer - Fullstack"
+    >
+      Engineer - Fullstack
+    </option>
+  </select>
+</div>
+`;

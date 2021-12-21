@@ -1,16 +1,21 @@
 //@flow
 import React from 'react';
 import ReactDOM from 'react-dom';
-import TextInput from './components/forms/textInput';
+import UserResponse from './components/userResponse';
+import { App } from './components/app';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './css/styles.scss';
+import formReducer from './reducers/form';
 
-const App = () => {
-  return (
-    <div>
-      <h1>Testing</h1>
-      <TextInput />
-    </div>
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
-  )
-};
+const store = createStore(formReducer, applyMiddleware(thunk))
 
-ReactDOM.render(<App />, document.getElementById('appMaster'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+  , document.getElementById('appMaster'));
+

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Textarea Component tests Shallow TextareComponent Snapshot 1`] = `
+<textarea
+  cols="50"
+  id="shortAnswer"
+  onChange={[Function]}
+  placeholder="Testing"
+  rows="10"
+/>
+`;

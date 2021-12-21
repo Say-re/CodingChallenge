@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio Selection Component Tests RadioSelectorComponent Match Snapshot Test 1`] = `
+<div>
+  <p>
+    Please choose the number of years you have been developing:
+  </p>
+  <div
+    className="radio"
+  >
+    <input
+      id="one"
+      name="experienceLevel"
+      onBlur={[Function]}
+      type="radio"
+      value="Less than one year"
+    />
+    <label
+      for="one"
+    >
+      Less than one year
+    </label>
+  </div>
+  <div
+    className="radio"
+  >
+    <input
+      id="two"
+      name="experienceLevel"
+      onBlur={[Function]}
+      type="radio"
+      value="More than 1 year but less than 3"
+    />
+    <label
+      for="two"
+    >
+      More than 1 year but less than 3
+    </label>
+  </div>
+  <div
+    className="radio"
+  >
+    <input
+      id="three"
+      name="experienceLevel"
+      onBlur={[Function]}
+      type="radio"
+      value="More than 3 years but less than 5"
+    />
+    <label
+      for="three"
+    >
+      More than 3 years but less than 5
+    </label>
+  </div>
+  <div
+    className="radio"
+  >
+    <input
+      id="four"
+      name="experienceLevel"
+      onBlur={[Function]}
+      type="radio"
+      value="More than 5 years"
+    />
+    <label
+      for="four"
+    >
+      More than 5 years
+    </label>
+  </div>
+</div>
+`;

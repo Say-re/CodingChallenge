@@ -1,0 +1,109 @@
+$main-color: blue;
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  max-width: 100%;
+  width: 100%;
+  color: rgb(48,
+      48,
+      48)
+}
+
+button {
+  background-color: transparent;
+  display: block;
+  margin: 0 auto;
+  height: 3rem;
+  width: 6rem;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.25rem;
+}
+
+p {
+  margin-bottom: 0.25rem;
+}
+
+h1 {
+  padding-bottom: 5px;
+  border-bottom: 4px solid rgb(20, 77, 163);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h5 {
+  margin: 5px 0;
+}
+
+div {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+label.blck-label {
+  display: block;
+}
+
+
+div.radio {
+  margin-top: 0;
+  position: relative;
+  left: 1rem;
+}
+
+.addSubWrapper {
+  width: 30%;
+}
+
+.nameSubWrapper {
+  width: 30%;
+}
+
+.subWrapper2 {
+  width: 65%;
+}
+
+#firstName,
+#lastName,
+#userEmail {
+  width: 100%;
+}
+
+#phoneWrapper {
+  width: 30%;
+}
+
+#userCity,
+#userState,
+#userZipcode,
+#userTelephone {
+  width: 100%;
+}
+
+#userAddress {
+  width: 100%;
+}
+
+
+#multiselectWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+#job-select {
+  margin-left: 0.5rem;
+}
+
+#selectOptions {
+  margin: 0.75rem 0;
+}
+
+label {
+  margin: 0.25rem 0;
+}

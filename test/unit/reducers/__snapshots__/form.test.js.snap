@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form Reducer Test Match Snapshot 1`] = `
+Object {
+  "firstName": "Travis",
+  "lastName": "Rose",
+  "userAddress": "123 Candycane Lane",
+  "userCity": "North Pole",
+  "userEmail": "annonymous@gmail.com",
+  "userExperience": "Less than 1 year",
+  "userJob": "Manager",
+  "userShortAnswer": "",
+  "userState": "Ice-Caps",
+  "userTelephone": "808-029-0394",
+  "userTest": "true",
+  "userZipcode": "123987",
+}
+`;
