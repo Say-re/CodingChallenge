@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1640244541180" clover="3.2.0">
-  <project timestamp="1640244541180" name="All files">
-    <metrics statements="77" coveredstatements="37" conditionals="16" coveredconditionals="5" methods="31" coveredmethods="11" elements="124" coveredelements="53" complexity="0" loc="77" ncloc="77" packages="6" files="12" classes="12"/>
+<coverage generated="1640261402362" clover="3.2.0">
+  <project timestamp="1640261402362" name="All files">
+    <metrics statements="77" coveredstatements="37" conditionals="14" coveredconditionals="4" methods="32" coveredmethods="11" elements="123" coveredelements="52" complexity="0" loc="77" ncloc="77" packages="6" files="12" classes="12"/>
     <package name="components">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="app.js" path="/Users/Sayre/coding/CodingChallenge/src/components/app.js">
@@ -24,14 +24,14 @@
       </file>
       <file name="multiSelect.js" path="/Users/Sayre/coding/CodingChallenge/src/components/forms/fields/multiSelect.js">
         <metrics statements="8" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="10" count="2" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="24" count="10" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="10" type="stmt"/>
       </file>
       <file name="radioSelector.js" path="/Users/Sayre/coding/CodingChallenge/src/components/forms/fields/radioSelector.js">
         <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
@@ -65,42 +65,44 @@
         <line num="11" count="0" type="stmt"/>
       </file>
     </package>
-    <package name="components.userResponse">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.js" path="/Users/Sayre/coding/CodingChallenge/src/components/userResponse/index.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+    <package name="components.userApplication">
+      <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="index.js" path="/Users/Sayre/coding/CodingChallenge/src/components/userApplication/index.js">
+        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
       </file>
     </package>
     <package name="containers">
-      <metrics statements="23" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <metrics statements="22" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="0"/>
       <file name="applicationResponse.js" path="/Users/Sayre/coding/CodingChallenge/src/containers/applicationResponse.js">
-        <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="16" count="1" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="85" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
       </file>
       <file name="form.js" path="/Users/Sayre/coding/CodingChallenge/src/containers/form.js">
         <metrics statements="16" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
-        <line num="78" count="0" type="stmt"/>
-        <line num="108" count="1" type="stmt"/>
-        <line num="109" count="0" type="stmt"/>
-        <line num="112" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="121" count="1" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="125" count="1" type="stmt"/>
       </file>
     </package>
     <package name="helpers">
@@ -119,18 +121,16 @@
       </file>
     </package>
     <package name="reducers">
-      <metrics statements="9" coveredstatements="7" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <metrics statements="7" coveredstatements="6" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="form.js" path="/Users/Sayre/coding/CodingChallenge/src/reducers/form.js">
-        <metrics statements="9" coveredstatements="7" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="7" coveredstatements="6" conditionals="3" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
         <line num="24" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="25" count="1" type="cond" truecount="1" falsecount="1"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
       </file>
     </package>
   </project>

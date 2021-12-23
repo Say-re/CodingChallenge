@@ -88,7 +88,7 @@ export const defaultFormFields: DefaultFormFields =
   secondaryAddressFields: [{
     field: 'userCity',
     type: 'text',
-    placeholder: 'Magic Village',
+    placeholder: 'Rovaniemi',
     label:
     {
       class: 'blck-label',
@@ -98,7 +98,7 @@ export const defaultFormFields: DefaultFormFields =
   {
     field: 'userState',
     type: 'text',
-    placeholder: 'North-pole',
+    placeholder: 'North Pole',
     label:
     {
       class: 'blck-label',

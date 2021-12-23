@@ -2,6 +2,7 @@
 import React from 'react';
 import { technologyExperience } from '../../../constants/form-fields';
 import type { SingleProp } from '../../../lib/types/forms';
+import { MultiSelectWrapper } from '../../../styled-components/forms/form-wrappers'
 
 type SingleObject = {
   [key: string]: string
@@ -9,7 +10,7 @@ type SingleObject = {
 
 const MultiSelectComponent = ({ onHandleInputChange }: SingleProp) => {
   return (
-    <div id='multiselectWrapper'>
+    <MultiSelectWrapper>
       <label for='codingExperience'>Please Select Coding Experience - select all that apply</label>
       <select id='codingExperience' multiple={true} size={technologyExperience.length} required onChange={(e) => {
         let selection = [];
@@ -26,7 +27,7 @@ const MultiSelectComponent = ({ onHandleInputChange }: SingleProp) => {
           )
         })}
       </select>
-    </div>
+    </MultiSelectWrapper>
   )
 };
 

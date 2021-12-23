@@ -9,29 +9,23 @@ export const defaultState: InputStateProps = {
   userEmail: 'annonymous@gmail.com',
   userAddress: '123 Candycane Lane',
   userCity: 'North Pole',
-  userState: 'Ice-Caps',
+  userState: 'Ice Caps',
   userZipcode: '123987',
   userTelephone: '808-029-0394',
   userJob: 'Manager',
   userExperience: 'Less than 1 year',
   userTechnologyExperience: ['css'],
   userShortAnswer: '',
-  userTest: false,
+  userTest: 'No',
 }
 
 
-
+// Any Changes to input fields are dispatched for update immediately within all form fields
 const formReducer = (state: InputStateProps = defaultState, action: Action): InputStateProps => {
   switch (action.type) {
     case 'HANDLE_INPUT_CHANGE': {
       let newState = state;
       const { updateValue, updateField } = action
-      if (updateField === 'userTechnologyExperience') {
-        return {
-          ...newState,
-          [updateField]: updateValue
-        }
-      }
       return {
         ...newState,
         [updateField]: updateValue

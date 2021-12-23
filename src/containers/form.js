@@ -1,6 +1,10 @@
 // @flow
 
 import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
+import { useNavigate, Link } from 'react-router-dom';
+
+//Components
 import { defaultFormFields } from '../constants/form-fields';
 import TextInputComponent from '../components/forms/fields/textInput';
 import SelectOptionComponent from '../components/forms/fields/select';
@@ -8,24 +12,29 @@ import RadioSelectorComponent from '../components/forms/fields/radioSelector';
 import MultiSelectComponent from '../components/forms/fields/multiSelect';
 import TextareaComponent from '../components/forms/fields/textarea';
 import CheckboxComponent from '../components/forms/fields/checkbox';
-import { MainWrapper, FieldWrapper, FieldSubWrapper, FieldSubWrapper2, TopFieldWrapper, BottomFieldWrapper, PartOneWrapper, BlockFormFieldsWrapper } from '../styled-components/forms/form-wrappers';
-import { connect } from 'react-redux';
+import { MainWrapper, FieldWrapper, FieldSubWrapper, FieldSubWrapper2, PartOneWrapper, BlockFormFieldsWrapper } from '../styled-components/forms/form-wrappers';
+
+// Actions
 import { handleInputChange } from '../lib/actions';
-import { useNavigate } from 'react-router-dom';
+
+//Helpers
 import { sampleAPI } from '../helpers';
 
 // Types 
 import type { TopFormField, SecondaryAddressField, SelectOptionProps } from '../lib/types/forms';
 
-
+// Constants
 const { topFields, secondaryAddressFields, addressField, telephoneField } = defaultFormFields;
 
+
+//Construct Job Application Form
 const JobForm = ({ onHandleInputChange, userJob }: SelectOptionProps) => {
   let navigate = useNavigate();
   return (
     <Fragment>
-      <div className="navBar"><span className="applicationHeading">Intelage Coding Challenge</span></div>
+      <header className="navBar"><span className="applicationHeading">Intelage Coding Challenge</span></header>
       <MainWrapper>
+        <Link to="/form">Click Here</Link>
         <p className="topMes">Please fill out the following form to be considered for the Junior Developer Position.</p>
         <form action='https://reqres.in/api/application' method="POST" id='applicationForm' name='applicationForm' onSubmit={(e) => {
           e.preventDefault();
@@ -37,7 +46,7 @@ const JobForm = ({ onHandleInputChange, userJob }: SelectOptionProps) => {
           navigate('/form');
         }}>
           <PartOneWrapper>
-            <TopFieldWrapper>
+            <FieldWrapper>
               {topFields.map((field: TopFormField, index: number) => {
                 return (
                   <FieldSubWrapper key={index} >
@@ -53,7 +62,7 @@ const JobForm = ({ onHandleInputChange, userJob }: SelectOptionProps) => {
                   </FieldSubWrapper>
                 )
               })}
-            </TopFieldWrapper>
+            </FieldWrapper>
             <FieldWrapper>
               <FieldSubWrapper2 >
                 <label for={addressField.field} className={addressField.label.class}>Address</label>
@@ -75,7 +84,7 @@ const JobForm = ({ onHandleInputChange, userJob }: SelectOptionProps) => {
                   onHandleInputChange={onHandleInputChange} />
               </FieldSubWrapper>
             </FieldWrapper>
-            <BottomFieldWrapper>
+            <FieldWrapper>
               {secondaryAddressFields.map((field: SecondaryAddressField, index: number) => {
                 return (
                   <FieldSubWrapper key={index} >
@@ -92,7 +101,7 @@ const JobForm = ({ onHandleInputChange, userJob }: SelectOptionProps) => {
                   </FieldSubWrapper>
                 )
               })}
-            </BottomFieldWrapper>
+            </FieldWrapper>
           </PartOneWrapper>
           <BlockFormFieldsWrapper>
             <SelectOptionComponent onHandleInputChange={onHandleInputChange} userJob={userJob} />
@@ -100,8 +109,9 @@ const JobForm = ({ onHandleInputChange, userJob }: SelectOptionProps) => {
             <MultiSelectComponent onHandleInputChange={onHandleInputChange} />
             <TextareaComponent onHandleInputChange={onHandleInputChange} />
             <CheckboxComponent onHandleInputChange={onHandleInputChange} />
+            <button type="submit">Submit Application</button>
           </BlockFormFieldsWrapper>
-          <button type="submit">Submit Application</button>
+
         </form>
       </MainWrapper>
     </Fragment>

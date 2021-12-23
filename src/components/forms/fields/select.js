@@ -9,7 +9,7 @@ const SelectOptionComponent = ({ userJob, onHandleInputChange }: SelectOptionPro
   if (!userJob) userJob = "";
 
   return (
-    <div id="selectOptions">
+    <div className="blockFormFields">
       <label for="job-select">Select Job Title</label>
       <select id="job-select" name='jobs' required onChange={(e) => onHandleInputChange(e.target.value, 'userJob')}>
         {jobs.map((job: Object, index: number) => {

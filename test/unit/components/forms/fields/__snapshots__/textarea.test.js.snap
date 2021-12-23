@@ -9,7 +9,6 @@ exports[`Textarea Component tests Shallow TextareComponent Snapshot 1`] = `
     cols="50"
     id="shortAnswer"
     onChange={[Function]}
-    placeholder="Testing"
     required={true}
     rows="10"
   />

@@ -5,13 +5,13 @@ import { SingleProp } from '../../../lib/types/forms';
 const CheckboxComponent = ({ onHandleInputChange }: SingleProp) => {
 
   return (
-    <div>
+    <div className="blockFormFields">
       <input type="checkbox" name="userTest" onChange={(e) => {
         if (e.target.checked) {
-          e.target.value = true
+          e.target.value = "Yes"
           return onHandleInputChange(e.target.value, e.target.name);
         } else {
-          e.target.value = false
+          e.target.value = "No"
           return onHandleInputChange(e.target.value, e.target.name)
         }
       }

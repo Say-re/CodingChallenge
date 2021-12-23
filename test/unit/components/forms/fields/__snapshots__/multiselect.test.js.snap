@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Multiselect Component Tests MultiSelectComponent Snapshot Test 1`] = `
-<div
-  id="multiselectWrapper"
->
+<styled.div>
   <label
     for="codingExperience"
   >
@@ -77,5 +75,5 @@ exports[`Multiselect Component Tests MultiSelectComponent Snapshot Test 1`] = `
       S3
     </option>
   </select>
-</div>
+</styled.div>
 `;

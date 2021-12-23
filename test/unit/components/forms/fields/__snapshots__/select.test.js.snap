@@ -2,7 +2,7 @@
 
 exports[`Select Option Component Tests SelectOptionComponent Snapshot 1`] = `
 <div
-  id="selectOptions"
+  className="blockFormFields"
 >
   <label
     for="job-select"

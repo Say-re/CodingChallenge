@@ -1,9 +1,9 @@
 //@flow
 
-type BreakPoints = {
+type BreakPoints= {
   [key: string]: number,
 }
 
-export const breakpoints: BreakPoints = {
-  mobile: 550
+export const breakpoints: BreakPoints= {
+  mobile: 500
 }

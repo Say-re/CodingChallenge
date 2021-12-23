@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio Selection Component Tests RadioSelectorComponent Match Snapshot Test 1`] = `
-<div>
+<div
+  className="blockFormFields"
+>
   <p>
     Please choose the number of years you have been developing:
   </p>

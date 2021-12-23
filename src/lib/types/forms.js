@@ -84,7 +84,7 @@ export type InputStateProps = {
   userExperience: string,
   userTechnologyExperience: Array<string>,
   userShortAnswer: string,
-  userTest: boolean,
+  userTest: string,
 }
 export type InputProps = InputStateProps & {
   onHandleInputChange: (updateValue: any, updateField: string) => void;

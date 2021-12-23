@@ -10,12 +10,12 @@ Object {
   "userExperience": "Less than 1 year",
   "userJob": "Manager",
   "userShortAnswer": "",
-  "userState": "Ice-Caps",
+  "userState": "Ice Caps",
   "userTechnologyExperience": Array [
     "css",
   ],
   "userTelephone": "808-029-0394",
-  "userTest": false,
+  "userTest": "No",
   "userZipcode": "123987",
 }
 `;

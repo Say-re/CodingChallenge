@@ -5,7 +5,7 @@ import type { SingleProp } from '../../../lib/types/forms';
 
 const RadioSelectorComponent = ({ onHandleInputChange }: SingleProp) => {
   return (
-    <div>
+    <div className="blockFormFields">
       <p>Please choose the number of years you have been developing:</p>
       <div className="radio">
         <input type="radio" id="one" name="experienceLevel" value={dFF.userExperience[0]} onChange={() => {
