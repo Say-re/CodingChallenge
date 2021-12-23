@@ -1,4 +1,6 @@
 $main-color: blue;
+$breakpoint: 550px;
+
 
 html,
 body {
@@ -6,9 +8,7 @@ body {
   font-family: Helvetica, sans-serif;
   max-width: 100%;
   width: 100%;
-  color: rgb(48,
-      48,
-      48)
+  color: rgb(37, 37, 37)
 }
 
 button {
@@ -17,19 +17,48 @@ button {
   margin: 0 auto;
   height: 3rem;
   width: 6rem;
+  border: 0.075rem solid #274c77;
+  color: #274c77;
   border-radius: 0.25rem;
   padding: 0.1rem 0.25rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #274c77;
+  border: 0.1rem solid #a3cef1;
+  color: #a3cef1;
 }
 
 p {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.1rem;
 }
 
-h1 {
-  padding-bottom: 5px;
-  border-bottom: 4px solid rgb(20, 77, 163);
+.resField {
+  font-weight: 100;
+  border: 0.05rem solid rgb(48, 48, 48);
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.25rem;
+  line-height: 1.2;
+  white-space: pre-line;
+  overflow-x: hidden;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  background-color: #274c77;
+  border-bottom: 0.75rem solid #668197;
+}
+
+.applicationHeading {
+  font-size: 3rem;
+  color: #dd8928;
+  font-weight: 900;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 h5 {
@@ -56,26 +85,22 @@ div.radio {
   left: 1rem;
 }
 
-.addSubWrapper {
-  width: 30%;
+input {
+  @media screen and(max-width: $breakpoint) {
+    line-height: 22px;
+  }
 }
 
-.nameSubWrapper {
-  width: 30%;
+
+.topMes {
+  font-weight: 100;
 }
 
-.subWrapper2 {
-  width: 65%;
-}
 
 #firstName,
 #lastName,
 #userEmail {
   width: 100%;
-}
-
-#phoneWrapper {
-  width: 30%;
 }
 
 #userCity,

@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import RadioSelectorComponent from '../../../../../src/components/forms/fields/radioSelector';
 
 describe('Radio Selection Component Tests', () => {
-  test('RadioSelectorComponent Match Snapshot Test', () => {
+  test('RadioSelectorComponent Match Snapshot Test', async () => {
     const wrapper = shallow(<RadioSelectorComponent />)
-    expect(wrapper).toMatchSnapshot();
+    await expect(wrapper).toMatchSnapshot();
   })
 })

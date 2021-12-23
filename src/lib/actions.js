@@ -1,9 +1,11 @@
-export const submitForm = (values) => {
-  type: 'SUBMIT_FORM',
-    values
-}
-export const updateFormField = (value, updateField) => ({
-  type: 'UPDATE_FORM_FIELD',
-  value,
+//@flow
+
+import type { HandleInputChange } from "./types/actions"
+
+
+export const handleInputChange = (updateValue: any, updateField: string): HandleInputChange => ({
+  type: 'HANDLE_INPUT_CHANGE',
+  updateValue,
   updateField
 })
+

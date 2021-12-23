@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import TextAreaComponent from '../../../../../src/components/forms/fields/textarea'
 
 describe('Textarea Component tests', () => {
-  test('Shallow TextareComponent Snapshot', () => {
+  test('Shallow TextareComponent Snapshot', async () => {
     const wrapper = shallow(<TextAreaComponent />)
-    expect(wrapper).toMatchSnapshot();
+    await expect(wrapper).toMatchSnapshot();
   })
 })

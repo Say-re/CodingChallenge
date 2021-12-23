@@ -13,6 +13,7 @@ exports[`Select Option Component Tests SelectOptionComponent Snapshot 1`] = `
     id="job-select"
     name="jobs"
     onChange={[Function]}
+    required={true}
   >
     <option
       key="0"

@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import CheckboxComponent from '../../../../../src/components/forms/fields/checkbox'
 
 describe('Checkbox Component Tests', () => {
-  test('CheckboxComponent Snapshot Test', () => {
+  test('CheckboxComponent Snapshot Test', async () => {
     const wrapper = shallow(<CheckboxComponent />)
-    expect(wrapper).toMatchSnapshot()
+    await expect(wrapper).toMatchSnapshot()
   })
 });

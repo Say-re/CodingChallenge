@@ -3,14 +3,14 @@
 exports[`Checkbox Component Tests CheckboxComponent Snapshot Test 1`] = `
 <div>
   <input
-    name="test"
+    name="userTest"
+    onChange={[Function]}
     type="checkbox"
-    value="one"
   />
   <label
     for="test"
   >
-    This is only a Test!
+    I acknowledge that this is only a test.
   </label>
 </div>
 `;

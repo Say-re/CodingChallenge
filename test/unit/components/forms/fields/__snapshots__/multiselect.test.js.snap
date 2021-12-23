@@ -13,54 +13,65 @@ exports[`Multiselect Component Tests MultiSelectComponent Snapshot Test 1`] = `
     id="codingExperience"
     multiple={true}
     onChange={[Function]}
+    required={true}
     size={10}
   >
     <option
+      key="0"
       value="Javascript"
     >
       Javascript
     </option>
     <option
+      key="1"
       value="HTML"
     >
       HTML
     </option>
     <option
+      key="2"
       value="CSS"
     >
       CSS
     </option>
     <option
+      key="3"
       value="SASS"
     >
       SASS
     </option>
     <option
+      key="4"
       value="NodeJS"
     >
       NodeJS
     </option>
     <option
+      key="5"
       value="Java"
     >
       Java
     </option>
     <option
+      key="6"
       value="AWS - Lambda"
     >
       AWS - Lambda
     </option>
     <option
+      key="7"
       value="AWS - IAM"
     >
       AWS - IAM
     </option>
     <option
+      key="8"
       value="AWS - DynamoDB"
     >
       AWS - DynamoDB
     </option>
     <option
+      key="9"
       value="S3"
     >
       S3

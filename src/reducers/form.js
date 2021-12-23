@@ -1,4 +1,9 @@
-export const defaultState = {
+// @flow
+
+import type { InputStateProps } from "../lib/types/forms";
+import type { Action } from "../lib/types/actions";
+
+export const defaultState: InputStateProps = {
   firstName: 'Travis',
   lastName: 'Rose',
   userEmail: 'annonymous@gmail.com',
@@ -9,30 +14,24 @@ export const defaultState = {
   userTelephone: '808-029-0394',
   userJob: 'Manager',
   userExperience: 'Less than 1 year',
+  userTechnologyExperience: ['css'],
   userShortAnswer: '',
-  userTest: 'true'
+  userTest: false,
 }
 
 
-const formReducer = (state = defaultState, action) => {
+
+const formReducer = (state: InputStateProps = defaultState, action: Action): InputStateProps => {
   switch (action.type) {
-    case 'SUBMIT_FORM': {
-      const newState = state;
-      let { firstName, lastName, userEmail, userAddress } = action.values
-      return {
-        ...newState,
-        values: {
-          ...newState.values,
-          firstName: firstName,
-          lastName: lastName,
-          userEmail: userEmail,
-          userAddress: userAddress
+    case 'HANDLE_INPUT_CHANGE': {
+      let newState = state;
+      const { updateValue, updateField } = action
+      if (updateField === 'userTechnologyExperience') {
+        return {
+          ...newState,
+          [updateField]: updateValue
         }
       }
-    }
-    case 'UPDATE_FORM_FIELD': {
-      const newState = state;
-      const { updateValue, updateField } = action
       return {
         ...newState,
         [updateField]: updateValue
@@ -43,6 +42,5 @@ const formReducer = (state = defaultState, action) => {
     }
   }
 }
-
 
 export default formReducer

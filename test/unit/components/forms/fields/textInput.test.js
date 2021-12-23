@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import TextInputComponent from '../../../../../src/components/forms/fields/textInput';
 
 describe('Text Input Component Tests', () => {
-  test('Shallow TextInputComponent Snapshot', () => {
+  test('Shallow TextInputComponent Snapshot', async () => {
     const wrapper = shallow(<TextInputComponent />)
-    expect(wrapper).toMatchSnapshot();
+    await expect(wrapper).toMatchSnapshot();
   })
 })

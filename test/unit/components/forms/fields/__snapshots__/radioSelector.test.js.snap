@@ -11,7 +11,7 @@ exports[`Radio Selection Component Tests RadioSelectorComponent Match Snapshot T
     <input
       id="one"
       name="experienceLevel"
-      onBlur={[Function]}
+      onChange={[Function]}
       type="radio"
       value="Less than one year"
     />
@@ -27,7 +27,7 @@ exports[`Radio Selection Component Tests RadioSelectorComponent Match Snapshot T
     <input
       id="two"
       name="experienceLevel"
-      onBlur={[Function]}
+      onChange={[Function]}
       type="radio"
       value="More than 1 year but less than 3"
     />
@@ -43,7 +43,7 @@ exports[`Radio Selection Component Tests RadioSelectorComponent Match Snapshot T
     <input
       id="three"
       name="experienceLevel"
-      onBlur={[Function]}
+      onChange={[Function]}
       type="radio"
       value="More than 3 years but less than 5"
     />
@@ -59,7 +59,7 @@ exports[`Radio Selection Component Tests RadioSelectorComponent Match Snapshot T
     <input
       id="four"
       name="experienceLevel"
-      onBlur={[Function]}
+      onChange={[Function]}
       type="radio"
       value="More than 5 years"
     />

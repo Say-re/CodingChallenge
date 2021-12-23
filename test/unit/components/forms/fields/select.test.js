@@ -4,8 +4,8 @@ import SelectOptionComponent from '../../../../../src/components/forms/fields/se
 
 
 describe('Select Option Component Tests', () => {
-  test('SelectOptionComponent Snapshot', () => {
+  test('SelectOptionComponent Snapshot', async () => {
     const wrapper = shallow(<SelectOptionComponent />)
-    expect(wrapper).toMatchSnapshot();
+    await expect(wrapper).toMatchSnapshot();
   })
 })

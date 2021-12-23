@@ -1,4 +1,6 @@
-import React from 'react';
+// @flow
+
+import React, { Fragment } from 'react';
 import { defaultFormFields } from '../constants/form-fields';
 import TextInputComponent from '../components/forms/fields/textInput';
 import SelectOptionComponent from '../components/forms/fields/select';
@@ -6,97 +8,108 @@ import RadioSelectorComponent from '../components/forms/fields/radioSelector';
 import MultiSelectComponent from '../components/forms/fields/multiSelect';
 import TextareaComponent from '../components/forms/fields/textarea';
 import CheckboxComponent from '../components/forms/fields/checkbox';
-import { MainWrapper, NameWrapper, AddressWrapper, PartOneWrapper } from '../styled-components/forms/form-wrappers';
+import { MainWrapper, FieldWrapper, FieldSubWrapper, FieldSubWrapper2, TopFieldWrapper, BottomFieldWrapper, PartOneWrapper, BlockFormFieldsWrapper } from '../styled-components/forms/form-wrappers';
 import { connect } from 'react-redux';
-import { updateFormField } from '../lib/actions';
+import { handleInputChange } from '../lib/actions';
 import { useNavigate } from 'react-router-dom';
+import { sampleAPI } from '../helpers';
 
-const { topFields, secondaryAddressFields, addressField } = defaultFormFields;
+// Types 
+import type { TopFormField, SecondaryAddressField, SelectOptionProps } from '../lib/types/forms';
 
-const JobForm = ({ onUpdateFormField, userJob }) => {
-  let navigate = useNavigate()
+
+const { topFields, secondaryAddressFields, addressField, telephoneField } = defaultFormFields;
+
+const JobForm = ({ onHandleInputChange, userJob }: SelectOptionProps) => {
+  let navigate = useNavigate();
   return (
-    <MainWrapper>
-      <h1>Intelage Coding Challenge</h1>
-      <h5>Please fill out the following form to be considered for the Junior Developer Position.</h5>
-      <form encType="multipart/form-data" action="/form-submit" method="POST" id='applicationForm' name='applicationForm' onSubmit={(e) => {
-        e.preventDefault();
-        navigate('/form');
-      }}>
-        <PartOneWrapper>
-          <NameWrapper>
-            {topFields.map((field, index) => {
-              return (
-                <div className="nameSubWrapper">
-                  <label for={field.field} className={field.label.class}>{field.label.text}</label>
-                  <TextInputComponent
-                    type={field.type}
-                    id={field.field}
-                    name={field.field}
-                    placeholder={field.placeholder}
-                    onUpdateFormField={onUpdateFormField} />
-                </div>
-              )
-            })}
-          </NameWrapper>
-          <AddressWrapper>
-            <div className="subWrapper2">
-              <label for={addressField.field} className={addressField.label.class}>Address</label>
-              <TextInputComponent type={addressField.type}
-                id={addressField.field}
-                name={addressField.field}
-                placeholder={addressField.placeholder}
-                onUpdateFormField={onUpdateFormField} />
-            </div>
-            <div id="phoneWrapper">
-              <label for="userTelephone" className='blck-label'>Phone Number</label>
-              <TextInputComponent
-                type="tel"
-                id="userTelephone"
-                name="userTelephone"
-                onUpdateFormField={onUpdateFormField} />
-            </div>
-          </AddressWrapper>
-          <AddressWrapper>
-            {secondaryAddressFields.map((field, index) => {
-              return (
-                <div className="addSubWrapper">
-                  <label for={field.field} className={field.label.class}>{field.label.text}</label>
-                  <TextInputComponent
-                    type={field.type}
-                    id={field.field}
-                    name={field.field}
-                    placeholder={field.placeholder}
-                    onUpdateFormField={onUpdateFormField}
-                  />
-                </div>
-              )
-            })}
-          </AddressWrapper>
-        </PartOneWrapper>
-        <div id="jobTitleWrapper">
-          <SelectOptionComponent onUpdateFormField={onUpdateFormField} userJob={userJob} />
-        </div>
-        <div id="yearsDevleopingWrapper">
-          <RadioSelectorComponent onUpdateFormField={onUpdateFormField} />
-        </div>
-        <div>
-          <MultiSelectComponent onUpdateFormField={onUpdateFormField} />
-        </div>
-        <div>
-          <TextareaComponent onUpdateFormField={onUpdateFormField} />
-        </div>
-        <div>
-          <CheckboxComponent />
-        </div>
-        <button type="submit">Submit Application</button>
-      </form>
-    </MainWrapper>
+    <Fragment>
+      <div className="navBar"><span className="applicationHeading">Intelage Coding Challenge</span></div>
+      <MainWrapper>
+        <p className="topMes">Please fill out the following form to be considered for the Junior Developer Position.</p>
+        <form action='https://reqres.in/api/application' method="POST" id='applicationForm' name='applicationForm' onSubmit={(e) => {
+          e.preventDefault();
+          const form = e.currentTarget
+          const url = form.action
+          const formData = new FormData(form)
+          const mockResponse = sampleAPI(url, formData);
+          console.log(mockResponse);
+          navigate('/form');
+        }}>
+          <PartOneWrapper>
+            <TopFieldWrapper>
+              {topFields.map((field: TopFormField, index: number) => {
+                return (
+                  <FieldSubWrapper key={index} >
+                    <label key={index + 5} for={field.field} className={field.label.class}>{field.label.text}</label>
+                    <TextInputComponent
+                      key={index}
+                      type={field.type}
+                      id={field.field}
+                      name={field.field}
+                      placeholder={field.placeholder}
+                      pattern={null}
+                      onHandleInputChange={onHandleInputChange} />
+                  </FieldSubWrapper>
+                )
+              })}
+            </TopFieldWrapper>
+            <FieldWrapper>
+              <FieldSubWrapper2 >
+                <label for={addressField.field} className={addressField.label.class}>Address</label>
+                <TextInputComponent type={addressField.type}
+                  id={addressField.field}
+                  name={addressField.field}
+                  placeholder={addressField.placeholder}
+                  pattern={null}
+                  onHandleInputChange={onHandleInputChange} />
+              </FieldSubWrapper2>
+              <FieldSubWrapper>
+                <label for={telephoneField.field} className={telephoneField.label.class}>{telephoneField.label.text}</label>
+                <TextInputComponent
+                  type={telephoneField.type}
+                  id={telephoneField.field}
+                  name={telephoneField.field}
+                  pattern={telephoneField.pattern}
+                  placeholder={telephoneField.placeholder}
+                  onHandleInputChange={onHandleInputChange} />
+              </FieldSubWrapper>
+            </FieldWrapper>
+            <BottomFieldWrapper>
+              {secondaryAddressFields.map((field: SecondaryAddressField, index: number) => {
+                return (
+                  <FieldSubWrapper key={index} >
+                    <label key={index + 5} for={field.field} className={field.label.class}>{field.label.text}</label>
+                    <TextInputComponent
+                      key={index}
+                      type={field.type}
+                      id={field.field}
+                      name={field.field}
+                      placeholder={field.placeholder}
+                      pattern={null}
+                      onHandleInputChange={onHandleInputChange}
+                    />
+                  </FieldSubWrapper>
+                )
+              })}
+            </BottomFieldWrapper>
+          </PartOneWrapper>
+          <BlockFormFieldsWrapper>
+            <SelectOptionComponent onHandleInputChange={onHandleInputChange} userJob={userJob} />
+            <RadioSelectorComponent onHandleInputChange={onHandleInputChange} />
+            <MultiSelectComponent onHandleInputChange={onHandleInputChange} />
+            <TextareaComponent onHandleInputChange={onHandleInputChange} />
+            <CheckboxComponent onHandleInputChange={onHandleInputChange} />
+          </BlockFormFieldsWrapper>
+          <button type="submit">Submit Application</button>
+        </form>
+      </MainWrapper>
+    </Fragment>
   )
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  onUpdateFormField: (updateValue, updateField) => dispatch(updateFormField(updateValue, updateField))
+  onHandleInputChange: (updateValue: any, updateField: string) => dispatch(handleInputChange(updateValue, updateField)),
 })
 
 const mapStateToProps = (state) => ({

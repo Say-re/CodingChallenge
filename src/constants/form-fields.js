@@ -1,4 +1,8 @@
-export const jobs = [
+// @flow
+
+import type { DefaultFormFields } from "../lib/types/forms";
+
+export const jobs: Array<{ [key: string]: string }> = [
   { title: 'Manager' },
   { title: 'Engineer - Lead' },
   { title: 'Engineer - Mid-level' },
@@ -6,16 +10,16 @@ export const jobs = [
   { title: 'Engineer - Front-end Focused' },
   { title: 'Engineer - Backend Focused' },
   { title: 'Engineer - Fullstack' }
-]
+];
 
-export const experience = [
+export const experience: Array<{ [key: string]: string }> = [
   { experience: 'Less than one year' },
   { experience: 'More than 1 year but less than 3' },
   { experience: 'More than 3 years but less than 5' },
   { experience: 'More than 5 years' }
 ];
 
-export const technologyExperience = [
+export const technologyExperience: Array<{ [key: string]: string }> = [
   { technology: 'Javascript' },
   { technology: 'HTML' },
   { technology: 'CSS' },
@@ -26,9 +30,9 @@ export const technologyExperience = [
   { technology: 'AWS - IAM' },
   { technology: 'AWS - DynamoDB' },
   { technology: 'S3' },
-]
+];
 
-export const defaultFormFields =
+export const defaultFormFields: DefaultFormFields =
 {
   topFields: [{
     field: 'firstName',
@@ -71,6 +75,16 @@ export const defaultFormFields =
       text: 'Main Address'
     },
   },
+  telephoneField: {
+    field: 'userTelephone',
+    type: 'tel',
+    placeholder: '895-023-0595',
+    pattern: '[0-9]{3}-[0-9]{3}-[0-9]{4}',
+    label: {
+      class: 'blck-label',
+      text: 'Phone Number'
+    }
+  },
   secondaryAddressFields: [{
     field: 'userCity',
     type: 'text',
@@ -107,4 +121,4 @@ export const defaultFormFields =
     'More than 3 years but less than 5',
     'More than 5 years'
   ]
-}
+};

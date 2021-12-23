@@ -1,22 +1,28 @@
+// @flow
 import React from 'react';
 import { technologyExperience } from '../../../constants/form-fields';
+import type { SingleProp } from '../../../lib/types/forms';
 
-const MultiSelectComponent = ({ onUpdateFormField }) => {
+type SingleObject = {
+  [key: string]: string
+}
+
+const MultiSelectComponent = ({ onHandleInputChange }: SingleProp) => {
   return (
     <div id='multiselectWrapper'>
       <label for='codingExperience'>Please Select Coding Experience - select all that apply</label>
-      <select id='codingExperience' multiple={true} size={technologyExperience.length} onChange={() => {
+      <select id='codingExperience' multiple={true} size={technologyExperience.length} required onChange={(e) => {
         let selection = [];
-        for (let option of document.getElementById('codingExperience').options) {
+        for (let option of e.target.options) {
           if (option.selected) {
             selection.push(option.value);
           }
         }
-        onUpdateFormField(selection, 'codingExperience')
+        onHandleInputChange(selection, 'userTechnologyExperience')
       }}>
-        {technologyExperience.map((technology, index) => {
+        {technologyExperience.map((technology: SingleObject, index: number) => {
           return (
-            <option value={technology.technology}>{technology.technology}</option>
+            <option key={index} value={technology.technology}>{technology.technology}</option>
           )
         })}
       </select>

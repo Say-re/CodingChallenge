@@ -1,17 +1,15 @@
 import formReducer, { defaultState } from '../../../src/reducers/form';
 
 describe('Form Reducer Test', () => {
-  test('Match Snapshot', (done) => {
-    expect(defaultState).toMatchSnapshot()
-    done();
+  test('Match Snapshot', async () => {
+    await expect(defaultState).toMatchSnapshot()
   });
-  test('UPDATE_FORM_FIELD', (done) => {
+  test('HANDLE_INPUT_CHANGE', async () => {
     const responseState = formReducer(defaultState, {
-      type: 'UPDATE_FORM_FIELD',
+      type: 'HANDLE_INPUT_CHANGE',
       updateValue: 'Bob',
       updateField: 'firstName'
     })
-    expect(responseState.firstName).toEqual('Bob');
-    done()
+    await expect(responseState.firstName).toEqual('Bob');
   });
 })

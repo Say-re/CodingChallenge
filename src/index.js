@@ -1,9 +1,7 @@
 //@flow
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserResponse from './components/userResponse';
 import { App } from './components/app';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './css/styles.scss';
 import formReducer from './reducers/form';
 

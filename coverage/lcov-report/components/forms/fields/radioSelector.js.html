@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>2/6</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>2/6</span>
             </div>
         
             
@@ -99,12 +99,14 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,37 +137,38 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
-import { defaultFormFields as dFF } from '../../../constants/form-fields'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// @flow
+import React from 'react';
+import { defaultFormFields as dFF } from '../../../constants/form-fields';
+import type { SingleProp } from '../../../lib/types/forms';
 &nbsp;
-const { userExperience } = dFF;
-const RadioSelectorComponent = ({ onUpdateFormField }) =&gt; {
+const RadioSelectorComponent = ({ onHandleInputChange }: SingleProp) =&gt; {
   return (
     &lt;div&gt;
       &lt;p&gt;Please choose the number of years you have been developing:&lt;/p&gt;
       &lt;div className="radio"&gt;
-        &lt;input type="radio" id="one" name="experienceLevel" value={userExperience[0]} onBlur={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >          onUpdateFormField(userExperience[0], "userExperience")</span>
+        &lt;input type="radio" id="one" name="experienceLevel" value={dFF.userExperience[0]} onChange={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >          onHandleInputChange(dFF.userExperience[0], "userExperience")</span>
         }} /&gt;
-        &lt;label for="one"&gt;{userExperience[0]}&lt;/label&gt;
+        &lt;label for="one"&gt;{dFF.userExperience[0]}&lt;/label&gt;
       &lt;/div&gt;
       &lt;div className="radio"&gt;
-        &lt;input type="radio" id="two" name="experienceLevel" value={userExperience[1]} onBlur={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >          onUpdateFormField(userExperience[1], "userExperience")</span>
+        &lt;input type="radio" id="two" name="experienceLevel" value={dFF.userExperience[1]} onChange={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >          onHandleInputChange(dFF.userExperience[1], "userExperience")</span>
         }} /&gt;
-        &lt;label for="two"&gt;{userExperience[1]}&lt;/label&gt;
+        &lt;label for="two"&gt;{dFF.userExperience[1]}&lt;/label&gt;
       &lt;/div&gt;
       &lt;div className="radio"&gt;
-        &lt;input type="radio" id="three" name="experienceLevel" value={userExperience[2]} onBlur={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >          onUpdateFormField(userExperience[2], "userExperience")</span>
+        &lt;input type="radio" id="three" name="experienceLevel" value={dFF.userExperience[2]} onChange={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >          onHandleInputChange(dFF.userExperience[2], "userExperience")</span>
         }} /&gt;
-        &lt;label for="three"&gt;{userExperience[2]}&lt;/label&gt;
+        &lt;label for="three"&gt;{dFF.userExperience[2]}&lt;/label&gt;
       &lt;/div&gt;
       &lt;div className="radio"&gt;
-        &lt;input type="radio" id="four" name="experienceLevel" value={userExperience[3]} onBlur={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >          onUpdateFormField(userExperience[3], "userExperience")</span>
+        &lt;input type="radio" id="four" name="experienceLevel" value={dFF.userExperience[3]} onChange={<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >          onHandleInputChange(dFF.userExperience[3], "userExperience")</span>
         }} /&gt;
-        &lt;label for="four"&gt;{userExperience[3]}&lt;/label&gt;
+        &lt;label for="four"&gt;{dFF.userExperience[3]}&lt;/label&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   )
@@ -178,7 +181,7 @@ export default RadioSelectorComponent;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener">istanbul</a>
-                at Tue Dec 21 2021 14:39:32 GMT-0800 (Pacific Standard Time)
+                at Wed Dec 22 2021 23:29:01 GMT-0800 (Pacific Standard Time)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import MultiSelectComponent from '../../../../../src/components/forms/fields/multiSelect'
 
 describe('Multiselect Component Tests', () => {
-  test('MultiSelectComponent Snapshot Test', () => {
+  test('MultiSelectComponent Snapshot Test', async () => {
     const wrapper = shallow(<MultiSelectComponent />)
-    expect(wrapper).toMatchSnapshot();
+    await expect(wrapper).toMatchSnapshot();
   })
 })

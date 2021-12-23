@@ -11,8 +11,11 @@ Object {
   "userJob": "Manager",
   "userShortAnswer": "",
   "userState": "Ice-Caps",
+  "userTechnologyExperience": Array [
+    "css",
+  ],
   "userTelephone": "808-029-0394",
-  "userTest": "true",
+  "userTest": false,
   "userZipcode": "123987",
 }
 `;

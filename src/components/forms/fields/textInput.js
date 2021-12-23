@@ -1,10 +1,13 @@
-import React from 'react';
+// @flow
 
-const TextInputComponent = ({ onUpdateFormField, value, field, type, id, name, placeholder }) => {
+import React from 'react';
+import type { TextInputProps } from '../../../lib/types/forms';
+
+const TextInputComponent = ({ onHandleInputChange, type, id, name, placeholder, pattern }: TextInputProps) => {
 
   return (
-    <input type={type} id={id} name={name} placeholder={placeholder} required onChange={(e) => {
-      onUpdateFormField(e.target.value, name)
+    <input pattern={pattern} type={type} id={id} name={name} placeholder={placeholder} required onChange={(e) => {
+      onHandleInputChange(e.target.value, name)
     }}
     />
   )
