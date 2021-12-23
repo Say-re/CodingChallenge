@@ -34,7 +34,6 @@ const JobForm = ({ onHandleInputChange, userJob }: SelectOptionProps) => {
     <Fragment>
       <header className="navBar"><span className="applicationHeading">Intelage Coding Challenge</span></header>
       <MainWrapper>
-        <Link to="/form">Click Here</Link>
         <p className="topMes">Please fill out the following form to be considered for the Junior Developer Position.</p>
         <form action='https://reqres.in/api/application' method="POST" id='applicationForm' name='applicationForm' onSubmit={(e) => {
           e.preventDefault();
